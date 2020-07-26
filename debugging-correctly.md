@@ -61,6 +61,16 @@ Even those who are experienced may waste time trying to do this, even if they ha
 
 Concisely, resort to mental compilation when you are more experienced and are not left with other options. Otherwise, print statements are enough to get around wrong answers \(incorrect results\), with address sanitizers around faulty results!
 
+## Possible Pitfall: Rewriting the Program
+
+Rewriting the program is sometimes a good idea, but remember to keep track of time! It is very easy to get carried away rewriting even parts of a program that are bug-free in obsessive hope that something might come through. 
+
+Do NOT delete your previous program. Make a new file! 
+
+If the problem is with the program's implementation of your logic and not your logic itself, it is usually better to fix the program directly. 
+
+Again, **always make extra copies!!**
+
 ## Conclusion
 
 You are now well-equipped with the most efficient methods of debugging around. Use them well!
