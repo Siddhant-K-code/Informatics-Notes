@@ -1,3 +1,4 @@
-# Informatics-Notes
+# About
 
-Backend of [Gitbook Informatics Notes](https://sendtoaryansh.gitbook.io/informatics-notes/)
+These are my informatics notes, written primarily in C++11. 
+
