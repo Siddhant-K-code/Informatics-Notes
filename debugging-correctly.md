@@ -53,6 +53,14 @@ The first flag generates a debug report \(in dSYM file format\) based on the lin
 
 Feel free to delete dSYM files after the run of course. 
 
+## Possible Pitfall: Simply Compiling Code Mentally
+
+Many beginners are convinced that they can compile the code line by line in their head to notice the error. This is actually a very advanced technique of debugging in that it takes great skill to master! Sure, a beginner may catch a missing semicolon, but most beginners will have their judgment clouded by their perceptions in the language, which may be behind the very problem. 
+
+Even those who are experienced may waste time trying to do this, even if they have higher chances of locating the problem as such. 
+
+Concisely, resort to mental compilation when you are more experienced and are not left with other options. Otherwise, print statements are enough to get around wrong answers \(incorrect results\), with address sanitizers around faulty results!
+
 ## Conclusion
 
 You are now well-equipped with the most efficient methods of debugging around. Use them well!
