@@ -57,6 +57,9 @@ class human {
         int body_temperature = 98, temper = 25; 
         string name = "Sal"; 
     public: //external reactions
+        string id() { //what do other people call him
+            return name; 
+        }
         string feeling() { //answers "how do I feel"
             if(body_temperature >= 97 && body_temperature <= 99) return "good"; 
             else return "bad"; 
@@ -74,7 +77,7 @@ This gives us something to work with, and we can now create `Sal` in `main()` as
 ```cpp
 int main() {
     human Sal; 
-    cout << Sal.name() <<  " feels " << Sal.feeling() << " and is " << Sal.emotion() 
+    cout << Sal.id() <<  " feels " << Sal.feeling() << " and is " << Sal.emotion() 
     << "\n"; 
 }
 ```
@@ -96,6 +99,9 @@ class human {
             name = _name; 
             body_temperature = _body_temperature, temper = _temper; 
         }
+        string id() { //what do other people call him
+            return name; 
+        }
         string feeling() { //answers "how do I feel"
             if(body_temperature >= 97 && body_temperature <= 99) return "good"; 
             else return "bad"; 
@@ -109,7 +115,7 @@ class human {
 
 int main() {
     human Sal("Sal", 98, 25); 
-    cout << Sal.name() << " feels " << Sal.feeling() << " and is " << Sal.emotion() 
+    cout << Sal.id() << " feels " << Sal.feeling() << " and is " << Sal.emotion() 
     << "\n"; 
 }
 ```
@@ -118,7 +124,7 @@ This is immediately very extensible if we wish to create multiple instances of `
 
 ```cpp
 void condition(human h) {
-    cout << h.name() << " feels " << h.feeling() << " and is " << h.emotion(); 
+    cout << h.id() << " feels " << h.feeling() << " and is " << h.emotion(); 
 }
 
 int main() {
@@ -142,6 +148,9 @@ struct human {
     string name; 
     human(string name, int body_temperature, int temper) : 
     name(name), body_temperature(body_temperature), temper(temper) {}
+    string id() { //what do other people call him
+        return name; 
+    }
     string feeling() { //answers "how do I feel"
         if(body_temperature >= 97 && body_temperature <= 99) return "good"; 
         else return "bad"; 
