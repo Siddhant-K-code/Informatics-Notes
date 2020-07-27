@@ -37,3 +37,12 @@ $ npx repo-to-pdf /Users/<yourname>/Informatics-Notes -c /Applications/calibre.a
 
 This, when done, will create a file called `Informatics-Notes.html` under your user directory. Open this in a browser for instance and then print it to PDF file format, generating your PDF copy. 
 
+### Cleanup
+
+Remove the HTML file as well as the repository folder. 
+
+```bash
+$ rm -rf Informatics-Notes
+$ rm Informatics-Notes.html
+```
+
