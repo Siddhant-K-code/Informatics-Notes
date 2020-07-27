@@ -27,6 +27,9 @@ class human {
         int body_temperature, temper
         string name; 
     public: //external reactions
+        string id() { //what do other people call him
+            return name; 
+        }
         string feeling() { //answers "how do I feel"
             if(body_temperature >= 97 && body_temperature <= 99) return "good"; 
             else return "bad"; 
