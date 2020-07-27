@@ -98,7 +98,7 @@ class human {
         int body_temperature, temper; 
         string name; 
     public: //external reactions
-        human(string _name, int body_temperature, int temper) {
+        human(string _name, int _body_temperature, int _temper) {
             name = _name; 
             body_temperature = _body_temperature, temper = _temper; 
         }
