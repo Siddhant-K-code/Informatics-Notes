@@ -1,4 +1,4 @@
-# Writing Generic Code
+# Writing Generic Code \(Advanced Bronze\)
 
 Generic code is an important concept in informatics. Of course, as all concepts go, you may dodge generic code and continue to write in a hyper-specific style. As such, begin by questioning purpose. 
 

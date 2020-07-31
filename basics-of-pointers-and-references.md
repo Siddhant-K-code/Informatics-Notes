@@ -1,4 +1,4 @@
-# Basics of Pointers and References
+# Basics of Pointers and References \(Advanced Bronze\)
 
 When people hear about pointers, they frequently dismiss them as a part of the language that is unnecessary to know. This is an alternative fact, and I will prove this to you. 
 

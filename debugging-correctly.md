@@ -53,6 +53,12 @@ The first flag generates a debug report \(in dSYM file format\) based on the lin
 
 Feel free to delete dSYM files after the run of course. 
 
+Here's a wonderful example of what a segfault looks like. Notice how it is readable due to line numbers. 
+
+![code](.gitbook/assets/image.png)
+
+![an actually readable segfault message \(notice the line numbers!\)](.gitbook/assets/image%20%281%29.png)
+
 ## Possible Pitfall: Simply Compiling Code Mentally
 
 Many beginners are convinced that they can compile the code line by line in their head to notice the error. This is actually a very advanced technique of debugging in that it takes great skill to master! Sure, a beginner may catch a missing semicolon, but most beginners will have their judgment clouded by their perceptions in the language, which may be behind the very problem. 
