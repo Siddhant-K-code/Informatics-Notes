@@ -1,4 +1,4 @@
-# Debugging Correctly
+# Debugging Correctly \(Bronze\)
 
 Debugging is one of the most important skills in programming \(not limited to the informatics scene\)! A good programmer can debug efficiently and produce efficient, bug-free code. Since debugging is often overlooked, this is your guide for how to debug _correctly_ \(yes, there are frequent pitfalls\). 
 
