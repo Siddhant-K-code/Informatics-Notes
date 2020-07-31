@@ -17,7 +17,7 @@ Now, a difference array is simply defined as the functional _inverse_ of a prefi
 ```cpp
 template<class T> T D(T A) {
     T diff = A; 
-    for(int i = A.size() - 1; i > 0; ++i) diff[i] -= diff[i - 1]; 
+    for(int i = A.size() - 1; i > 0; --i) diff[i] -= diff[i - 1]; 
     diff[0] = 0; 
     return diff;
 }
