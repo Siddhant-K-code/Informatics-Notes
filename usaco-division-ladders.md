@@ -10,7 +10,7 @@ The spirit of bronze is to essentially conduct an exhaustive search of all possi
 
 1. You are given up to 15 positive integers in sorted order. Between any two adjacent integers in the ordering is a gap \(for a total of 14 gaps\). In each gap you may place a + sign or - sign, thereby producing an arithmetic expression that will be evaluated. Now, you are given another positive integer X. How many positive integers not exceeding X is it impossible for this arithmetic expression to ever yield? \(EASY\)
 2. You are given a string S, not exceeding 8 in length. The _index_ of S is its position among the set of all its permutations written in lexicographically ascending order, where the lexicographically smallest permutation of S has index 1. Find the index of S. \(MEDIUM\) 
-3. You are given an array of size 1e5. At any step, you can choose two numbers in this array and completely reverse the contiguous subarray of all elements between and including these chosen numbers. Determine the minimum number of such steps to perfectly sort the original array in lexicographically ascending order. \(HARD\)
+3. You are given an array of size 1e3. At any step, you can choose two numbers in this array and completely reverse the contiguous subarray of all elements between and including these chosen numbers. Determine the minimum number of such steps to perfectly sort the original array in lexicographically ascending order. \(HARD\)
 
 SILVER:
 
