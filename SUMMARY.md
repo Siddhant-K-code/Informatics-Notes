@@ -1,6 +1,7 @@
 # Table of contents
 
 * [About](README.md)
+* [Preparing for Contests](preparing-for-contests.md)
 * [Writing Generic Code \(Advanced Bronze\)](writing-generic-code.md)
 * [Debugging Correctly \(Bronze\)](debugging-correctly.md)
 * [Difference Arrays \(Silver\)](difference-arrays-silver.md)
