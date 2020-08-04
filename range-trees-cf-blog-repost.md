@@ -1,6 +1,6 @@
-# Range Trees \(CF Blog Repost\)
+# Range Trees \(Gold\) \(CF Blog Repost\)
 
-I reproduce my first CF blog here. It covers range trees as well as some of their overlooked properties.
+I reproduce my first CF blog here \(leaving the formatting unchanged and thus slightly annoying\). It covers range trees as well as some of their overlooked properties, especially useful for contests. 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
