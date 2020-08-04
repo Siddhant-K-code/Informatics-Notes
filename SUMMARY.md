@@ -9,4 +9,5 @@
 * [Beat USACO Bronze: A Guide](beat-usaco-bronze-a-guide.md)
 * [USACO Division Ladders](usaco-division-ladders.md)
 * [Division Ladders Answers](division-ladders-answers.md)
+* [Range Trees \(CF Blog Repost\)](range-trees-cf-blog-repost.md)
 
