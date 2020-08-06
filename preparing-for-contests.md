@@ -8,11 +8,7 @@ Identify your weaknesses \(through previous contests if you have taken them, or 
 
 The few weeks before \(plan for contest strategy\):
 
-First, if you plan to use a template in-contest, know that you are **not** allowed to have it prewritten. As such, practice writing your template out now so you don't need to stress later! You need to be able to write it from scratch efficiently at the beginning of the contest \(spending no more than around five minutes\). If your template is small or you don't use templates, this is easy, but otherwise, train yourself! This is why I recommend writing your own templates: your familiarity will help you recall. 
-
-If this is something you are interested in, see [Making a Contest Template](https://sendtoaryansh.gitbook.io/informatics-notes/making-a-contest-template).
-
-Personally, I know my template based on chunking and ordering and can reproduce it within around three to five minutes as needed. 
+First, if you plan to use a template in-contest, know that you are **not** allowed to have it prewritten. As such, practice writing your template out now so you don't need to stress later! You need to be able to write it from scratch efficiently at the beginning of the contest \(spending no more than around five minutes\). If your template is small or you don't use templates, this is easy, but otherwise, train yourself! This is why I recommend writing your own templates: your familiarity will help you recall. Personally, I know my template based on chunking and ordering and can reproduce it within around three to five minutes as needed. 
 
 Take one or at most two mock contests, spaced out, simulating real conditions. You can use these as opportunities to also practice writing your template. These are very tiring and will take huge fractions of your day, so rest well prior. Take note of your mistakes. Focus now mostly on what you already know and will use and less on learning new things you are uncomfortable with. Solve problems and avoid solving ones you may encounter on a mock you plan to take.
 
