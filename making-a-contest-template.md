@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-At this point, we have constructed a good basic template to use. If you want to add more utilities such as macros and so on, make sure you produce a template you can memorize to provide stressing near contest day. Find a balance between what you can memorize and include and what you should simply leave out. Here are some examples:
+At this point, we have constructed a good basic template to use. If you want to add more utilities such as macros and so on, make sure you produce a template you can memorize to prevent stressing near contest day. Find a balance between what you can memorize and include and what you should simply leave out. Here are some examples:
 
 [Ben's Original Template](https://github.com/bqi343/USACO/blob/master/Implementations/content/contest/templateLong.cpp) \(too big for USACO but has helpful features you might consider including\)
 
