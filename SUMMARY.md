@@ -1,6 +1,7 @@
 # Table of contents
 
 * [About](README.md)
+* ["Unusing" Identifiers](unusing-identifiers.md)
 * [Preparing for Contests](preparing-for-contests.md)
 * [Making a Contest Template](making-a-contest-template.md)
 * [Writing Generic Code \(Advanced Bronze\)](writing-generic-code.md)
