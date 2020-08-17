@@ -6,6 +6,7 @@
 * [Making a Contest Template](making-a-contest-template.md)
 * [Writing Generic Code \(Advanced Bronze\)](writing-generic-code.md)
 * [Debugging Correctly \(Bronze\)](debugging-correctly.md)
+* [Scopes 101](scopes-101.md)
 * [Difference Arrays \(Silver\)](difference-arrays-silver.md)
 * [Basics of Pointers and References \(Advanced Bronze\)](basics-of-pointers-and-references.md)
 * [Range Trees \(Gold\) \(CF Blog Repost\)](range-trees-cf-blog-repost.md)
