@@ -13,4 +13,5 @@
 * [Beat USACO Bronze: A Guide](beat-usaco-bronze-a-guide.md)
 * [USACO Division Ladders](usaco-division-ladders.md)
 * [Division Ladders Answers](division-ladders-answers.md)
+* [Quickest IO Library](quickest-io-library.md)
 
