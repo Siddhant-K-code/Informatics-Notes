@@ -27,3 +27,5 @@ m1(re) { cin >> forward<T>(a); m2(cin >>); }
 
 Just like that, we have the capacity to write an IO library extremely quickly. 
 
+For more, you might consider writing a debug function by using `cerr` and `endl`. I leave this open to you as a simple exercise. 
+
