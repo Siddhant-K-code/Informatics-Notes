@@ -8,7 +8,7 @@ But I recently came upon a novel method that can streamline this very process, c
 
 The process is extremely simple: you can write the entire library in only four lines of code. 
 
-The first thing you need to know is that functions like `re` and `pr` need to be based on variadic template arguments. We can make a reusable macro like the below to handle any desired function `x`:
+The first thing you need to know is that functions like `re` and `pr` need to be based on variadic template arguments \(i.e., a comma separated chain\). We can make a reusable macro like the below to handle any desired function `x`. The semantics here are that the arguments are given as universal rvalue references for flexibility. 
 
 ```cpp
 #define m1(x) template<class T, class... U> void x(T&& a, U&&... b) 
