@@ -11,7 +11,7 @@ The process is extremely simple: you can write the entire library in only four l
 The first thing you need to know is that functions like `re` and `pr` need to be based on variadic template arguments. We can make a reusable macro like the below:
 
 ```cpp
-#define m1(x) template<class T, class... U> void (x)(T&& a, U&&... b) 
+#define m1(x) template<class T, class... U> void x(T&& a, U&&... b) 
 ```
 
 But how do we write the function itself? This is where we notice that the arguments are in the form of a parameter pack, meaning that we can just forward. In particular, we can make a second macro that hosts our forwarding pack:
