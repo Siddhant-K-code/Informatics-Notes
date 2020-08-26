@@ -6,6 +6,7 @@
 * [Making a Contest Template](making-a-contest-template.md)
 * [Writing Generic Code \(Advanced Bronze\)](writing-generic-code.md)
 * [Debugging Correctly \(Bronze\)](debugging-correctly.md)
+* [Quickest IO Library](quickest-io-library.md)
 * [Scopes 101](scopes-101.md)
 * [Difference Arrays \(Silver\)](difference-arrays-silver.md)
 * [Basics of Pointers and References \(Advanced Bronze\)](basics-of-pointers-and-references.md)
@@ -13,5 +14,4 @@
 * [Beat USACO Bronze: A Guide](beat-usaco-bronze-a-guide.md)
 * [USACO Division Ladders](usaco-division-ladders.md)
 * [Division Ladders Answers](division-ladders-answers.md)
-* [Quickest IO Library](quickest-io-library.md)
 
