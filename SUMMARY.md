@@ -24,4 +24,5 @@
 ## Chapter 2: Artificial Intelligence <a id="artificial-intelligence"></a>
 
 * [About Artificial Intelligence](artificial-intelligence/about-artificial-intelligence.md)
+* [What is Learning? Intro to Regression](artificial-intelligence/what-is-learning-intro-to-regression.md)
 

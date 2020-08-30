@@ -12,6 +12,10 @@ That said, before you proceed, I issue the below warning:
 
 _Generic code can easily assist black-boxing, where you write a snippet of code such that you either forget its meaning or have no idea what it means in the first place. This is a common pitfall, and you should avoid this as much as possible if you truly want to grasp a concept in informatics._ 
 
+Just as well, a secondary, more important warning:
+
+_All code produced in contests must not only be your own but must be written during your testing period! This means you should commit templates and generic code structures to memory if you want to be able to use them._ 
+
 Modern C++, a groundbreaking language in the current informatics scene, indeed has several builtin features to support and streamline generic code. Here, we will cover the basic important ones you will definitely want to add to your coding arsenal. 
 
 ### Classes & Structs
