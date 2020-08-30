@@ -16,6 +16,8 @@ And the computer understood this! The computer just had to use the function you 
 
 But what if we wanted the computer to _find the function_ based on examples we gave it?
 
+![What is AI? Think of it as finding a function to map from X \(input\) to Y \(output\).](../.gitbook/assets/image%20%285%29.png)
+
 Maybe this time we feed the program examples of what we want it to do:
 
 | Input x | Output f\(x\) |
