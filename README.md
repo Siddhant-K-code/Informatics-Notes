@@ -1,6 +1,10 @@
 # About
 
-[These](http://sendtoaryansh.gitbook.io/) are my informatics notes, written primarily in C++11. For the corresponding backend, visit [the GitHub page](https://github.com/Aryansh-S/Informatics-Notes). If in search of more resources, I direct you to [my GitHub USACO repository](https://github.com/Aryansh-S/USACO) or [USACO Guide](https://usaco-guide.vercel.app/).
+[These](http://sendtoaryansh.gitbook.io/) are my informatics notes, written primarily following the language conventions of C++11 \(and thus compatible with versions greater than or equal to 11\). For the corresponding backend, visit [the GitHub page](https://github.com/Aryansh-S/Informatics-Notes). 
+
+Chapter 1 \(Programming Contests\): If in search of more resources, I direct you to [my GitHub USACO repository](https://github.com/Aryansh-S/USACO) or [USACO Guide](https://usaco-guide.vercel.app/).
+
+Chapter 2 \(Artificial Intelligence\): [This](https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&h=AT1bo8LSfxw901Jzgq4rjqZCPKHLf4KfQXx21bUSUhqESkI1XcfFrcYM6OZ0D2NxbaAeTIZrkFLeGHAmAOjH3STkK02QjppgbnirSxNVWcX2937mXIin2PBjg--b82BtHqFbUTxCJ4_rGqBGb92p3vBP8RA) short video series is the best resource to get the gist of artificial intelligence from a broader standpoint. 
 
 ## Convert to PDF
 

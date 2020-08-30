@@ -1,6 +1,12 @@
 # Table of contents
 
 * [About](README.md)
+
+## Chapter 1: Programming Contests <a id="chapter-1-programming-contests-1"></a>
+
+---
+
+* [About Programming Contests](about-programming-contests.md)
 * ["Unusing" Identifiers](unusing-identifiers.md)
 * [Preparing for Contests](preparing-for-contests.md)
 * [Making a Contest Template](making-a-contest-template.md)
@@ -14,4 +20,8 @@
 * [Beat USACO Bronze: A Guide](beat-usaco-bronze-a-guide.md)
 * [USACO Division Ladders](usaco-division-ladders.md)
 * [Division Ladders Answers](division-ladders-answers.md)
+
+## Chapter 2: Artificial Intelligence <a id="artificial-intelligence"></a>
+
+* [About Artificial Intelligence](artificial-intelligence/about-artificial-intelligence.md)
 
