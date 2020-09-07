@@ -97,13 +97,16 @@ We can structure this as follows. First, we start with the maximum possible expo
 
 Then, once we locate the sweet spot, we take its parent. 
 
+The one case to be careful of is if `a` and `b` are already equal, in which case we return `a`. 
+
 In all, this looks like the following: 
 
 ```cpp
 int lca(int a, int b) {
     lift(a, dep[a] - min(dep[a], dep[b])); 
     lift(b, dep[b] - min(dep[a], dep[b])); 
-    for(int l = mxe; l >= 0; ++l)
+    if(a == b) return a; 
+    for(int l = mxe; l >= 0; --l)
         if(up[a][l] != up[b][l]) a = up[a][l], b = up[b][l]; 
     return up[a][0]; 
 }
@@ -137,7 +140,8 @@ void lift(int &node, int dist) { // pass node by reference and lift
 int lca(int a, int b) {
     lift(a, dep[a] - min(dep[a], dep[b])); 
     lift(b, dep[b] - min(dep[a], dep[b])); 
-    for(int l = mxe; l >= 0; ++l)
+    if(a == b) return a;
+    for(int l = mxe; l >= 0; --l)
         if(up[a][l] != up[b][l]) a = up[a][l], b = up[b][l]; 
     return up[a][0]; 
 }
