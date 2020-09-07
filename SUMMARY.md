@@ -19,6 +19,7 @@
 * [Range Trees \(Gold\) \(CF Blog Repost\)](range-trees-cf-blog-repost.md)
 * [Binary Lifting \(Gold\) Intro](binary-lifting-gold-intro.md)
 * [Binary Lifting \(Gold\) Part 1](binary-lifting-gold-part-1.md)
+* [Binary Lifting \(Gold\) Part 2](binary-lifting-gold-part-2.md)
 * [Beat USACO Bronze: A Guide](beat-usaco-bronze-a-guide.md)
 * [USACO Division Ladders](usaco-division-ladders.md)
 * [Division Ladders Answers](division-ladders-answers.md)

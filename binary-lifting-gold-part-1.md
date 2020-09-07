@@ -9,6 +9,7 @@
 
 * **Required**
   * **Basic understanding of what a general graph is in computer science, such as DFS and adjacency lists \(silver\)**
+  * **Reading of "Binary Lifting \(Gold\) Intro" for what to expect**
 * **Optional**
   * **Understanding of basic DP concepts \(gold\)**
 
