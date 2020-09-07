@@ -1,6 +1,6 @@
 # Binary Lifting \(Gold\) Part 1
 
-If you haven't read the intro yet, now would be a good time to do so. 
+If you haven't read the intro yet, now would be a good time to do so. While you technically don't _need_ binary lifting for gold, it is a situation similar to how you also don't need segment tree for gold: it can make your life easier if you use it, but you don't have to. 
 
 Suppose we start simple and review what a tree is first. 
 
