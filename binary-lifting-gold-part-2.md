@@ -165,5 +165,11 @@ int main() {
 }
 ```
 
+The relevant section in CPH also explains the algorithm fairly well graphically but is not self-contained and lacks code and implementation details:
 
+![Introducing the Problem](.gitbook/assets/image%20%2810%29.png)
+
+![Introducing the Method](.gitbook/assets/image%20%288%29.png)
+
+![Time Complexity Analysis](.gitbook/assets/image%20%289%29.png)
 
