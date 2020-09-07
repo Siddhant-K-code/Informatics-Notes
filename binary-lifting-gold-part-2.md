@@ -10,6 +10,7 @@
 * **Required**
   * **All prerequisites carry over from "Binary Lifting \(Gold\) Part 1"**
   * **A thorough understanding of binary lifting from "Binary Lifting \(Gold\) Part 1"**
-* **Optional**
-  * **An idea of "two pointer" technique \(silver\)**
+  * **An idea of binary search \(silver\)**
+
+\*\*\*\*
 
