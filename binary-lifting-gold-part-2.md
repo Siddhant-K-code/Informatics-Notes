@@ -14,7 +14,7 @@
 
 In the first part, we discovered a way to lift up any distance from a node in a tree in merely logarithmic time. This enabled us to efficiently answer problems demanding multiple queries. Now, we are ready to take on a more challenging but related problem. 
 
-We must efficiently compute the lowest common ancestor, or **LCA**, of two nodes. Based on just the words "lowest common ancestor," you can infer what the problem looks like, but formally, we must find the node `x` in the tree such that `x` is an ancestor of both nodes `a` and `b` but has maximum depth \(is "lowest" or as far from the root as possible\). 
+We must efficiently compute the lowest common ancestor, or **LCA**, of two nodes \(and support `q` queries like before\). Based on just the words "lowest common ancestor," you can infer what the problem looks like, but formally, we must find the node `x` in the tree such that `x` is an ancestor of both nodes `a` and `b` but has maximum depth \(is "lowest" or as far from the root as possible\). 
 
 Why is this problem important? LCA pops up not only in numerous competitive programming problems regarding tree traversals or reaching one node from another, but it also has real world significance when studying how inheritance classes can work in object-oriented programming. 
 
@@ -32,7 +32,7 @@ lift(a, dep[a] - min(dep[a], dep[b]));
 lift(b, dep[b] - min(dep[a], dep[b])); 
 ```
 
-For completeness, we also separate `lift()` out as a function from the code from the first part:
+For completeness, we also separate `lift()` out as a function from the code from the first part, adding an `lca()` function and fixing the nature of our queries:
 
 ```cpp
 #include <bits/stdc++.h>
@@ -56,6 +56,11 @@ void lift(int &node, int dist) { // pass node by reference and lift
             node = up[node][l]; // jump up by the power of 2 at this point
 }
 
+int lca(int a, int b) {
+    lift(a, dep[a] - min(dep[a], dep[b])); 
+    lift(b, dep[b] - min(dep[a], dep[b])); 
+}
+
 int main() {
     cin.tie(0)->sync_with_stdio(0);
      
@@ -73,6 +78,11 @@ int main() {
     for(int l = 1; l < mxe; ++l) 
         for(int i = 0; i < n; ++i) 
             if(up[i][l-1] != -1) up[i][l] = up[up[i][l-1]][l-1];
+    
+    for(int i = 0; i < q; ++i) {
+        int a,b; cin >> a >> b, --a, --b; 
+        cout << lca(a,b) + 1 << "\n"; 
+    }
 }
 ```
 
