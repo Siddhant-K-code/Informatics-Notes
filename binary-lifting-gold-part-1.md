@@ -158,9 +158,9 @@ int main() {
     for(int i = 0; i < q; ++i) { 
         int node, k; cin >> node >> k, --node; 
         for(int l = 0; l < mxe; ++l) 
-            if(x != -1) if(k & (1 << l)) 
+            if(node != -1) if(k & (1 << l)) 
                 node = up[node][l]; // jump up by the power of 2 at this point
-        cout << node << "\n"; 
+        cout << ++node << "\n"; // renew one-indexing
     } 
 }
 ```
