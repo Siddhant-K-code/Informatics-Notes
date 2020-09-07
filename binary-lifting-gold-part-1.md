@@ -30,7 +30,7 @@ Finally, you might imagine a "worst case" tree as a linked list beginning at the
 
 Now, we have understood what a tree is. 
 
-To introduce the necessity of binary lifting, begin with a simple question: how do we find the `k`th ancestor of a node? 
+To introduce the necessity of binary lifting, begin with a simple question: how do we find the `k`th ancestor of a node? Assume that nonexistent ancestors are node value `-1` by default.
 
 There is a very simple `O(k)` solution: move up `k` times, taking parents of parents iteratively \(similar to how we described ancestors before\). 
 
@@ -43,4 +43,62 @@ Note that any number has a unique representation as a sum of powers of two. This
 Why is this useful? Well, instead of jumping up a height of `7` edges from a node, if we knew how we could jump `1`, `2`, and `4` edges, we could simply jump up `1`, `2`, and `4`. This gives us a key insight: for any node, what if we precomputed what nodes we would reach if we jumped up from that node by powers of `2`? This would mean merely `log(n)` different computations for each of `n` nodes, or `n log(n)` preprocessing. Then, we could simply jump any distance `d` by breaking it into powers of two based on its binary representation and using a precomputed table to answer queries in `log(d)` time.  If `d` is even on the order of `n` as in the "worst case" tree \(linked list\), we can still answer `q` queries in this way in `O(n log(n))` preprocessing and then `O(log(n))` per query for `q` queries, for a total of `O(n log(n) + q log(n))`, which passes in time. 
 
 This is a great idea, but the next step is to see it through in code. 
+
+* For a general picture of what we are about to do, for each node, we want to be able to have a precomputed lookup table for jumping up powers of two. In other words, we want a 2D array `up[node][exponent]` such that we jump from `node` by a distance of `exp(2, exponent)`. We can do this by using the principle of dynamic programming, calculating powers of two iteratively based on results we have already stored. 
+  * In particular, we can imagine knowing the value of `up[i][l-1]`, or the node we jump to when we move a distance of `exp(2, l-1)` up from `i`. If we want to find `up[i][l]`, then this is just the same as jumping up `l-1` levels from `i` to some node `m` and then another `l-1` levels \(we know that `exp(2, l) = exp(2, l-1) + exp(2, l-1)`, so it is logical to make this manipulation\). Since `m` would just be `up[i][l-1]`, our target node `up[i][l]` would just be `up[m][l-1] = up[up[i][l-1]][l-1]`. 
+  * This gives us an idea of what we want our DP to do. Since we can write `up[i][l] = up[up[i][l-1]][l-1]`, it follows that it makes sense to have the outer for loop to iterate by levels \(since we only want to start computing things at level `l` once we have exhausted level `l-1`, as this will allow us to use our developed recurrence\). 
+
+There are only two caveats remaining that we can iron out for the DP. 
+
+* The first is to find our base cases in this DP. Fortunately, this is simple. Our base cases look like `up[i][0]` for any node `i`, or verbally, we are asking what the `exp(2,0) = 1`st ancestor of node `i` is. This is the same as the parent of node `i`. Sometimes problems are nice and just give us the parents right off the bat, in which case we can just fill in all `up[i][0]` directly. Otherwise, if we just have the raw adjacency list, we need to be a bit more careful. Since we want the parent node of each node, we can start a downward DFS from the root node and fill out parents accordingly. This is what such a DFS would look like: 
+
+```cpp
+void dfs(int v, int p) { // keep track of current node and its parent node
+    up[v][0] = p; // mark the parent in the array
+    vis[v] = 1; // mark the node as visited
+    for(int u: adj[v]) if(!vis[u]) dfs(u,v); // visit all unvisited children
+}
+```
+
+And we can just start this up as `dfs(0,-1)` in the `main` function, recalling that nonexistent ancestors must be node value `-1` \(since the parent of a root does not exist, as noted before\). 
+
+* Now, we have filled out the base cases. All that is left is paying close attention to node values that do not exist. This means that we can `memset` our whole `up` array at `-1` to the beginning, so as we are filling it out, the values that are not updated with existing nodes are kept track of as nonexistent. This allows us to respect that nonexistent ancestors must be node value `-1`. 
+
+In summary, this is our entire preprocessing code, assuming that nodes are given to use in a one-indexed fashion \(meaning that we shift them all down by `1` to normalize for zero-indexing, which is preferred\):
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std; 
+
+int n,q; 
+const int mxn = 1e5, mxe = log2(mxn) + 5; 
+vector<vector<int>> adj; 
+
+void dfs(int v, int p) { // keep track of current node and its parent node
+    up[v][0] = p; // mark the parent in the array
+    vis[v] = 1; // mark the node as visited
+    for(int u: adj[v]) if(!vis[u]) dfs(u,v); // visit all unvisited children
+}
+
+int main() {
+    cin.tie(0)->sync_with_stdio(0);
+     
+    cin >> n >> q; 
+    adj.resize(n); // start the adjacency list with space for n nodes
+    
+    for(int i = 0; i < n - 1; ++i) { // get in n - 1 edges
+        int a,b; cin >> a >> b, --a, --b; 
+        adj[a].emplace_back(b), adj[b].emplace_back(a); 
+    } 
+    
+    memset(up, -1, sizeof(up)); // memset up to -1 to begin
+    dfs(0,-1); // fill out up base cases
+    
+    for(int l = 1; l < mxe; ++l) 
+        for(int i = 0; i < n; ++i) 
+            if(up[i][l-1] != -1) up[i][l] = up[up[i][l-1]][l-1]; 
+}
+```
+
+Now that we have preprocessed everything and filled out our `up` array, we must answer queries. 
 
