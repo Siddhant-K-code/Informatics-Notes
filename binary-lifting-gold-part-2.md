@@ -106,7 +106,7 @@ int lca(int a, int b) {
     lift(a, dep[a] - min(dep[a], dep[b])); 
     lift(b, dep[b] - min(dep[a], dep[b])); 
     if(a == b) return a; 
-    for(int l = mxe; l >= 0; --l)
+    for(int l = mxe - 1; l >= 0; --l)
         if(up[a][l] != up[b][l]) a = up[a][l], b = up[b][l]; 
     return up[a][0]; 
 }
@@ -141,7 +141,7 @@ int lca(int a, int b) {
     lift(a, dep[a] - min(dep[a], dep[b])); 
     lift(b, dep[b] - min(dep[a], dep[b])); 
     if(a == b) return a;
-    for(int l = mxe; l >= 0; --l)
+    for(int l = mxe - 1; l >= 0; --l)
         if(up[a][l] != up[b][l]) a = up[a][l], b = up[b][l]; 
     return up[a][0]; 
 }
