@@ -2,6 +2,8 @@
 
 If you haven't read the intro yet, now would be a good time to do so. While you technically don't _need_ binary lifting for gold, it is a situation similar to how you also don't need segment tree for gold: it can make your life easier if you use it, but you don't have to. 
 
+This post, although essentially self-contained and well-developed, is extremely dense. To maximize understanding, read each chunk carefully. 
+
 Suppose we start simple and review what a tree is first. 
 
 A **tree** is any graph with `n` nodes and `n-1` edges \(where each node is connected to at least one other node via an edge\). For now, we will assume the edges of the tree are all undirected \(meaning that they can be traversed in both ways\). It is also straightforward to inductively show the following properties:
@@ -151,4 +153,10 @@ int main() {
 ```
 
 And we're done!
+
+The relevant section in CPH also explains the algorithm fairly well graphically but is not self-contained and lacks code and implementation details:
+
+![Introducing the Problem](.gitbook/assets/image%20%286%29.png)
+
+![Explaining the 2D Preprocessing Table](.gitbook/assets/image%20%287%29.png)
 
