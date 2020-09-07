@@ -71,8 +71,9 @@ In summary, this is our entire preprocessing code, assuming that nodes are given
 using namespace std; 
 
 int n,q; 
-const int mxn = 1e5, mxe = log2(mxn) + 5; 
+const int mxn = 1e5 + 5, mxe = log2(mxn) + 5; 
 vector<vector<int>> adj; 
+int up[mxn][mxe]; 
 
 void dfs(int v, int p) { // keep track of current node and its parent node
     up[v][0] = p; // mark the parent in the array
@@ -101,4 +102,53 @@ int main() {
 ```
 
 Now that we have preprocessed everything and filled out our `up` array, we must answer queries. 
+
+In particular, for each of `q` queries, we are given `node` and `k`, some value to jump up by. We want to jump up by powers of two based on our lookup table `up`, but in order to do so, we must again be careful. One idea is to use a `bitset`, since those give us binary representations for free. But we can do better. 
+
+Recall the bitwise `&` operator. It gives us a comparison between each bit of the first operand to the second. However, since we plan to iterate for some level exponent `l` over only powers of two \(specifically given by `exp(2, l) = 1 << l`\), we know that a bit in common means that this power of two does exist in the binary representation of the desired `k`. If we iterate then over all powers of two and check this continuously, we will have addressed effectively every bit in the binary representation of `k`, which is exactly what we need to do. Once again, as we do this, we make sure that if the node value is `-1` at some point in the process, it remains `-1` throughout and basically skips the rest of the process:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std; 
+
+int n,q; 
+const int mxn = 1e5 + 5, mxe = log2(mxn) + 5; 
+vector<vector<int>> adj; 
+int up[mxn][mxe]; 
+
+void dfs(int v, int p) { // keep track of current node and its parent node
+    up[v][0] = p; // mark the parent in the array
+    vis[v] = 1; // mark the node as visited
+    for(int u: adj[v]) if(!vis[u]) dfs(u,v); // visit all unvisited children
+}
+
+int main() {
+    cin.tie(0)->sync_with_stdio(0);
+     
+    cin >> n >> q; 
+    adj.resize(n); // start the adjacency list with space for n nodes
+    
+    for(int i = 0; i < n - 1; ++i) { // get in n - 1 edges
+        int a,b; cin >> a >> b, --a, --b; 
+        adj[a].emplace_back(b), adj[b].emplace_back(a); 
+    } 
+    
+    memset(up, -1, sizeof(up)); // memset up to -1 to begin
+    dfs(0,-1); // fill out up base cases
+    
+    for(int l = 1; l < mxe; ++l) 
+        for(int i = 0; i < n; ++i) 
+            if(up[i][l-1] != -1) up[i][l] = up[up[i][l-1]][l-1];
+    
+    for(int i = 0; i < q; ++i) { 
+        int node, k; cin >> node >> k, --node; 
+        for(int l = 0; l < mxe; ++l) 
+            if(x != -1) if(k & (1 << l)) 
+                node = up[node][l]; 
+        cout << node << "\n"; 
+    } 
+}
+```
+
+And we're done!
 
