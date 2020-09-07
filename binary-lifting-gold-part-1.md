@@ -89,6 +89,7 @@ int n,q;
 const int mxn = 1e5 + 5, mxe = log2(mxn) + 5; 
 vector<vector<int>> adj; 
 int up[mxn][mxe]; 
+bool vis[mxn];
 
 void dfs(int v, int p) { // keep track of current node and its parent node
     up[v][0] = p; // mark the parent in the array
@@ -130,6 +131,7 @@ int n,q;
 const int mxn = 1e5 + 5, mxe = log2(mxn) + 5; 
 vector<vector<int>> adj; 
 int up[mxn][mxe]; 
+bool vis[mxn];
 
 void dfs(int v, int p) { // keep track of current node and its parent node
     up[v][0] = p; // mark the parent in the array

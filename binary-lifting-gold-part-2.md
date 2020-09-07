@@ -42,6 +42,7 @@ int n,q;
 const int mxn = 1e5 + 5, mxe = log2(mxn) + 5; 
 vector<vector<int>> adj; 
 int up[mxn][mxe], dep[mxn]; 
+bool vis[mxn];
 
 void dfs(int v, int p, int d) { // keep track of current, parent, and depth
     up[v][0] = p; // mark the parent
@@ -118,6 +119,7 @@ int n,q;
 const int mxn = 1e5 + 5, mxe = log2(mxn) + 5; 
 vector<vector<int>> adj; 
 int up[mxn][mxe], dep[mxn]; 
+bool vis[mxn];
 
 void dfs(int v, int p, int d) { // keep track of current, parent, and depth
     up[v][0] = p; // mark the parent
