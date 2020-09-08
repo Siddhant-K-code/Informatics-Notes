@@ -12,6 +12,10 @@
   * **A thorough understanding of binary lifting from "Binary Lifting \(Gold\) Part 1"**
   * **An idea of binary search \(silver\)**
 
+**Disclaimer**
+
+* **This post, although considerably self-contained and full of information with great emphasis on obscure ideas, should be read and understood with care and ample time. Follow along with each piece of code as it is presented; I recommend you to have your own code file as well. This ensures that the code will be built up in digestible chunks instead of overwhelming and difficult ones.** 
+
 In the first part, we discovered a way to lift up any distance from a node in a tree in merely logarithmic time. This enabled us to efficiently answer problems demanding multiple queries. Now, we are ready to take on a more challenging but related problem. 
 
 We must efficiently compute the lowest common ancestor, or **LCA**, of two nodes \(and support `q` queries like before\). Based on just the words "lowest common ancestor," you can infer what the problem looks like, but formally, we must find the node `x` in the tree such that `x` is an ancestor of both nodes `a` and `b` but has maximum depth \(is "lowest" or as far from the root as possible\). 

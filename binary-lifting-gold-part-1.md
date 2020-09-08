@@ -13,6 +13,10 @@
 * **Optional**
   * **Understanding of basic DP concepts \(gold\)**
 
+**Disclaimer**
+
+* **This post, although considerably self-contained and full of information with great emphasis on obscure ideas, should be read and understood with care and ample time. Follow along with each piece of code as it is presented; I recommend you to have your own code file as well. This ensures that the code will be built up in digestible chunks instead of overwhelming and difficult ones.** 
+
 If you haven't read the intro yet, now would be a good time to do so. While you technically don't _need_ binary lifting for gold, it is a situation similar to how you also don't need segment tree for gold: it can make your life easier if you use it, but you don't have to.
 
 Suppose we start simple and review what a tree is first. 
