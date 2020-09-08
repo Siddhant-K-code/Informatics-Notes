@@ -2,7 +2,7 @@
 
 **What's Covered**
 
-* **Tree definition, properties, and traversals**
+* **Tree definition and properties**
 * **Finding the kth ancestor using binary lifting**
 
 **Prerequisites**
