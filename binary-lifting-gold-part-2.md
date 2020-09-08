@@ -93,7 +93,7 @@ This is because we know that our "LCA categorization" monotonically increases. I
 
 The question is, how do we binary search? We can think of what we did with binary lifting, when we already knew what distance we wanted to jump and took its binary representation. So what if we take the binary representation of `k` and binary search on that? We can actually look at the individual exponents in the powers of two that fit into `k` and always include those!
 
-We can structure this as follows. First, we start with the maximum possible exponent, `mxe`. Then, if this overshoots our sweet spot and takes us to the same node from both `a` and `b`, we strategically choose to ignore it. Then, we repeat with `mxe-1`. Of course, at some point, there will be an exponent `e` such that jumping by `exp(2, e)` no longer overshoots but is just right. In that case, we can actually jump both nodes up by `exp(2, e)` and continue to binary search on the remaining distance. 
+We can structure this as follows. First, we start with the maximum possible exponent, `mxe-1`. Then, if this overshoots our sweet spot and takes us to the same node from both `a` and `b`, we strategically choose to ignore it. Then, we repeat with `mxe-2`. Of course, at some point, there will be an exponent `e` such that jumping by `exp(2, e)` no longer overshoots but is just right. In that case, we can actually jump both nodes up by `exp(2, e)` and continue to binary search on the remaining distance. 
 
 Then, once we locate the sweet spot, we take its parent. 
 
