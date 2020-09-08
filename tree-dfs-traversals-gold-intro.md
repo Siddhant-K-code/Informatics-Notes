@@ -13,3 +13,5 @@ The series will be roughly structured as follows:
 * Part 3: Application to Subtree Queries
 * Part 4: Application to Path Queries
 
+The overarching goal is to teach content in a stepwise manner with digestible snippets of code.
+
