@@ -48,7 +48,7 @@ void dfs(int v, int p, int d) { // keep track of current, parent, and depth
     up[v][0] = p; // mark the parent
     dep[v] = d; // mark the depth
     vis[v] = 1; // mark the node as visited
-    for(int u: adj[v]) if(!vis[u]) dfs(u,v,++d); // visit all unvisited children
+    for(int u: adj[v]) if(!vis[u]) dfs(u,v,d+1); // visit all unvisited children
 }
 
 void lift(int &node, int dist) { // pass node by reference and lift
@@ -105,7 +105,7 @@ In all, this looks like the following:
 int lca(int a, int b) {
     lift(a, dep[a] - min(dep[a], dep[b])); 
     lift(b, dep[b] - min(dep[a], dep[b])); 
-    if(a == b) return a; 
+    if(a == b) return a;
     for(int l = mxe - 1; l >= 0; --l)
         if(up[a][l] != up[b][l]) a = up[a][l], b = up[b][l]; 
     return up[a][0]; 
@@ -128,7 +128,7 @@ void dfs(int v, int p, int d) { // keep track of current, parent, and depth
     up[v][0] = p; // mark the parent
     dep[v] = d; // mark the depth
     vis[v] = 1; // mark the node as visited
-    for(int u: adj[v]) if(!vis[u]) dfs(u,v,++d); // visit all unvisited children
+    for(int u: adj[v]) if(!vis[u]) dfs(u,v,d+1); // visit all unvisited children
 }
 
 void lift(int &node, int dist) { // pass node by reference and lift
