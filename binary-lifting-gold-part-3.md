@@ -56,15 +56,16 @@ void dfs(int v, int p, int d) { // keep track of current, parent, and depth
     for(int u: adj[v]) if(!vis[u]) dfs(u,v,d+1); // visit all unvisited children
 }
 
-void lift(int &node, int dist) { // pass node by reference and lift
+void lift(int node, int dist) { // pass node and lift
     for(int l = 0; l < mxe; ++l) 
         if(node != -1) if(dist & (1 << l)) 
             node = up[node][l]; // jump up by the power of 2 at this point
+    return node; 
 }
 
 int lca(int a, int b) {
-    lift(a, dep[a] - min(dep[a], dep[b])); 
-    lift(b, dep[b] - min(dep[a], dep[b])); 
+    a = lift(a, dep[a] - min(dep[a], dep[b])); 
+    b = lift(b, dep[b] - min(dep[a], dep[b])); 
     if(a == b) return a;
     for(int l = mxe - 1; l >= 0; --l)
         if(up[a][l] != up[b][l]) a = up[a][l], b = up[b][l]; 
