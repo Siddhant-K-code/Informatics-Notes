@@ -9,7 +9,7 @@ Unfortunately, many of the resources available as of now describe poorly various
 The series will be roughly structured as follows:
 
 * Part 1: Types of Tree DFS
-* Part 2: Euler Tour
+* Part 2: Euler Tour \(Extended Preorder\)
 * Part 3: Application to Subtree Queries
 * Part 4: Application to Path Queries
 
