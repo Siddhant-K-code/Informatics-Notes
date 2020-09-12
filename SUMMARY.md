@@ -22,6 +22,7 @@
 * [Binary Lifting \(Gold\) Part 2](binary-lifting-gold-part-2.md)
 * [Binary Lifting \(Gold\) Part 3](binary-lifting-gold-part-3.md)
 * [Tree DFS Traversals \(Gold\) Intro](tree-dfs-traversals-gold-intro.md)
+* [Tree DFS Traversals \(Gold\) Part 1](tree-dfs-traversals-gold-part-1.md)
 * [Beat USACO Bronze: A Guide](beat-usaco-bronze-a-guide.md)
 * [USACO Division Ladders](usaco-division-ladders.md)
 * [Division Ladders Answers](division-ladders-answers.md)
