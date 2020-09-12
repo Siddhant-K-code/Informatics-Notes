@@ -15,5 +15,7 @@ To tour a general graph starting from a node, we can run either a DFS \(depth fi
 
 Trees are a lot more interesting because of the various properties they present. If we root a tree arbitrarily, we can run a single basic DFS and capture every node. The code behind this is silver level and not presented here. 
 
+But the key realization here is that there are many ways to capture these nodes via DFS. Think of these all as different
+
 
 
