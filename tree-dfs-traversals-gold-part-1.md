@@ -2,7 +2,7 @@
 
 **What's Covered**
 
-* **Specializations of general DFS for trees \(preorder and postorder\)** 
+* **Specializations of general DFS for trees \(preorder and postorder, along with some discussion of in-order and reverse in-order\)** 
 
 **Prerequisites**
 
