@@ -13,6 +13,7 @@
 * [Writing Generic Code \(Advanced Bronze\)](writing-generic-code.md)
 * [Debugging Correctly \(Bronze\)](debugging-correctly.md)
 * [Quickest IO Library](quickest-io-library.md)
+* [My Vim Setup](my-vim-setup.md)
 * [Scopes 101](scopes-101.md)
 * [Difference Arrays \(Silver\)](difference-arrays-silver.md)
 * [Basics of Pointers and References \(Advanced Bronze\)](basics-of-pointers-and-references.md)
