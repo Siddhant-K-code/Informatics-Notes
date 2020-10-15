@@ -28,7 +28,7 @@ using namespace std;
 
 class human {
     private: //intrinsic properties
-        int body_temperature, temper
+        int body_temperature, temper;
         string name; 
     public: //external reactions
         string id() { //what do other people call him
